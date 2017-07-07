@@ -15,11 +15,11 @@
           <li><%= link_to "Home", root_path %></li>
           <li><%= link_to "Services", services_path %></li>
         <% if current_user %>
-          <li class="li-right"><%= link_to "Sign out", '/signout' %></li>
+          <li class="li-right"><%= link_to "Sign out", signout_path %></li>
           <li class="li-right"><%= link_to current_user.user_name, user_path(current_user) %></li>
         <% else %>
-          <li class="li-right"><%= link_to "Sign up", 'signup' %></li>
-          <li class="li-right"><%= link_to "Sign in", '/signin' %></li>
+          <li class="li-right"><%= link_to "Sign up", signup_path %></li>
+          <li class="li-right"><%= link_to "Sign in", signin_path %></li>
         <% end %>
         </ul>
       </div>

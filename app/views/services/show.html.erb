@@ -1,8 +1,11 @@
 <h1 class="center-text">Service Details</h1>
 
-
+<% if current_user %>
+  <%= link_to "Add A Review", new_service_review_path(@service)%><br>
+  <%= link_to "Edit", edit_service_path(@service) if current_user.admin == true %><br>
+  <%= link_to "Delete", service_path(@service), :data => {:confirm => "Are You Sure You Want To Delete This Service?", :method => "delete"} if current_user.admin == true %>
+<% end %>
 <div class="row">
-  <%= link_to "Add A Review", new_service_review_path(@service) if current_user %>
   <div class="col-md-2"></div>
   <div class="col-md-8">
     <div class="panel panel-default">
@@ -18,8 +21,8 @@
   <div class="col-md-2"></div>
 </div>
 
-<h3>Reviews</h3>
 <% if @service.reviews.any? %>
+<h3>Reviews</h3>
   <% @service.reviews.each do |review| %>
     <p> <%= review.content %> </p>
     <h5> Written By: <%= review.author %> </h5>
