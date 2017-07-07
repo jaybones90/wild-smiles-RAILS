@@ -1,11 +1,13 @@
-<h1> Add A New Service </h1>
+<h1 class="text-style"> Add A New Service </h1>
 
-<%= form_for @service do |f| %>
+<div class="text-style">
+  <%= form_for @service do |f| %>
   <%= f.label :name, "Name" %>
   <%= f.text_field :name %>
   <%= f.label :description, "Description" %>
   <%= f.text_field :description %>
   <%= f.label :cost, "Cost" %>
   <%= f.text_field :cost %>
+</div>
   <%= f.submit %>
-<% end %>
+  <% end %>

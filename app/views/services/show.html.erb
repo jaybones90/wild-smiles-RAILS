@@ -1,12 +1,12 @@
-<h1 class="center-text">Service Details</h1>
+<h1 class="center-text text-style">Service Details</h1>
 
 
 
 <div class="row">
   <div class="col-md-2">
     <% if current_user %>
-      <%= link_to "Edit Service", edit_service_path(@service) if current_user.admin == true %><br>
-      <%= link_to "Delete Service", service_path(@service), :data => {:confirm => "Are You Sure You Want To Delete This Service?", :method => "delete"} if current_user.admin == true %>
+      <%= link_to "Edit Service", edit_service_path(@service), class: "btn btn-default" if current_user.admin == true %><br><br>
+      <%= link_to "Delete Service", service_path(@service), class: "btn btn-default", :data => {:confirm => "Are You Sure You Want To Delete This Service?", :method => "delete"} if current_user.admin == true %>
     <% end %>
   </div>
   <div class="col-md-8">
@@ -21,21 +21,23 @@
     </div>
   </div>
   <div class="col-md-2">
-      <%= link_to "Add A Review", new_service_review_path(@service)%>
+      <%= link_to "Add A Review", new_service_review_path(@service), class: "btn btn-default" %>
   </div>
 </div>
 
 <% if @service.reviews.any? %>
-  <h2 class="center-text">Reviews</h2>
+  <h2 class="center-text text-style">Reviews</h2>
   <hr>
     <% @service.reviews.each do |review| %>
-    <div class="center-text">
+    <div class="center-text text-style">
     <p> <%= review.content %> </p>
     <h5> Written By: <%= review.author %> </h5>
-    <% if current_user %>
-    <%= link_to "Delete Review", service_review_path(@service, review), :data => {:confirm => "Are You Sure You Want To Delete This Review?", :method => "delete"} if current_user.admin == true %>
-    <% end %>
-    <hr>
   </div>
+  <div class="center-text">
+    <% if current_user %>
+    <%= link_to "Delete Review", service_review_path(@service, review), class: "btn btn-default", :data => {:confirm => "Are You Sure You Want To Delete This Review?", :method => "delete"} if current_user.admin == true %>
+    <% end %>
+  </div>
+    <hr>
   <% end %>
 <% end %>

@@ -1,9 +1,13 @@
-<div class="center-text padding">
+<div class="center-text padding text-style">
   <h1> All The Services We Offer</h1>
   <h4> Click any service to see more details </h4>
-  <% if current_user %>
-  <%= link_to "Add A New Service", new_service_path if current_user.admin == true%>
-  <% end %>
+</div>
+<div class="center-text">
+  <div class="btn btn-default">
+    <% if current_user %>
+    <%= link_to "Add A New Service", new_service_path if current_user.admin == true%>
+    <% end %>
+  </div>
 </div>
 
 
@@ -12,7 +16,7 @@
 <div class="row">
   <% @services.each do |service| %>
   <div class="col-md-6">
-    <div class="panel panel-default">
+    <div class="panel">
       <div class="panel-heading">
         <h1> <%= link_to service.name, service_path(service) %> </h1>
       </div>
