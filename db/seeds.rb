@@ -3,13 +3,13 @@ Review.destroy_all
 
 50.times do |index|
   Service.create!(name: Faker::App.name ,
-                        description: Faker::Lorem.paragraph(2),
+                        description: Faker::Lorem.paragraph(4),
                         cost: Faker::Commerce.price)
 end
 
 250.times do |index|
   Review.create!(author: Faker::GameOfThrones.character,
-                        content: Faker::Lorem.sentences(1),
+                        content: Faker::Lorem.paragraph(2),
                         service_id: Faker::Number.between(1, 50))
 end
 

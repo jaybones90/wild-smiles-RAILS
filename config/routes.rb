@@ -9,7 +9,11 @@ Rails.application.routes.draw do
   post '/signin' => 'sessions#create'
   get '/signout' => 'sessions#destroy'
 
-  resources :services
+  resources :services do
+    resources :reviews
+  end
+
+  resources :users, :only => [:show]
 
 
 end

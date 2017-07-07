@@ -9,10 +9,7 @@
   <div class="col-md-6">
     <div class="panel panel-default">
       <div class="panel-heading">
-        <h1> <%= service.name %> </h1>
-        <div class="panel-body">
-          <p> <%= service.description %> </p>
-        </div>
+        <h1> <%= link_to service.name, service_path(service) %> </h1>
       </div>
     </div>
   </div>
