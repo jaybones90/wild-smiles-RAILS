@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  root to: "pages#home"
 
   get '/signup' => 'users#new'
   post '/users' => 'users#create'
@@ -8,5 +9,5 @@ Rails.application.routes.draw do
   post '/signin' => 'sessions#create'
   get '/signout' => 'sessions#destroy'
 
-  
+
 end
