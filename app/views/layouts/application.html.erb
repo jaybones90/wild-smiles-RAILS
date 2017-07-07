@@ -13,6 +13,7 @@
       <div class="container">
         <ul>
           <li><%= link_to "Home", root_path %></li>
+          <li><%= link_to "Services", services_path %></li>
         <% if current_user %>
           <li class="li-right"><%= link_to "Sign out", '/signout' %></li>
           <li class="li-right"><%= link_to current_user.user_name, user_path(current_user) %></li>
