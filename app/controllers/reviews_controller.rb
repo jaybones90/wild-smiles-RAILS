@@ -17,6 +17,13 @@ class ReviewsController < ApplicationController
     end
   end
 
+  def destroy
+    @service = Service.find(params[:service_id])
+    @review = Review.find(params[:id])
+    @review.destroy
+    redirect_to service_path(@service)
+  end
+
 private
  def review_params
    params.require(:review).permit(:author, :content)

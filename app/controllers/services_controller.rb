@@ -1,5 +1,7 @@
 class ServicesController < ApplicationController
 
+  before_action :authorize, only: [:index, :show, :new]
+
   def index
     @services = Service.all
   end
