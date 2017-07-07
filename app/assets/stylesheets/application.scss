@@ -124,7 +124,40 @@ input[type="submit"], label {
 .btn {
   background-color: rgba(255, 255, 255, .7);
 }
-// .button-style {
-//   margin: 0px 400px 0px 400px;
-//   border: 2px solid black;
-// }
+
+.block-section-1 {
+  margin-top: 400px;
+  left: 0;
+  height: 500px;
+  width: 100%;
+  background-color: grey;
+  background-position: center;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+    h1 {
+      margin: 180px 300px 0 300px;
+      font-family: 'Zilla Slab';
+      text-align: center;
+      font-size: 50px;
+      color: white;
+    }
+}
+
+.block-section-2 {
+  margin-top: 1200px;
+  left: 0;
+  height: 500px;
+  width: 100%;
+  background-color: rgb(40, 44, 52);
+  background-position: center;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+.services-section {
+  margin-top: 900px;
+}
