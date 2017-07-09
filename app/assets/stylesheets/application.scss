@@ -95,13 +95,11 @@ input[type="submit"], label {
 
 
 .headline {
-  margin-top: 20%;
-  h1 {
-    font-size: 200px;
+    margin-top: 20%;
     font-family: 'Amatic SC';
     color: white;
     text-shadow: 2px 2px 4px black;
-  }
+    font-size: 150px;
 }
 
 .text-style {
@@ -110,6 +108,9 @@ input[type="submit"], label {
   text-shadow: 2px 2px 4px black;
   h1 {
     font-size: 50px;
+  }
+  input {
+    color: black;
   }
 }
 
@@ -145,7 +146,7 @@ input[type="submit"], label {
 }
 
 .block-section-2 {
-  margin-top: 1200px;
+  margin-top: 1700px;
   left: 0;
   height: 500px;
   width: 100%;
@@ -159,5 +160,8 @@ input[type="submit"], label {
 
 
 .services-section {
-  margin-top: 900px;
+  margin: 50px 0 0 50px;
+  .btn {
+    width: 200px;
+  }
 }

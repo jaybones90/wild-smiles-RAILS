@@ -11,14 +11,13 @@
 </div>
 
 
-<div class="block-section-1">
-  <h1> Memorable photo productions all over the world - landscapes, people and products </h1>
-</div>
 
-<div class="block-section-2">
   <div class="services-section">
     <% @services.each do |service| %>
-      <h5> <%= link_to service.name, service_path(service) %> <h5>
+    <ul>
+      <div class="btn">
+        <h5> <span class="glyphicon glyphicon-camera"> </span> <%= link_to service.name, service_path(service) %> <h5>
+        </div>
+    </ul>
     <% end %>
   </div>
-</div>
