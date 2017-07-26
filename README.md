@@ -2,6 +2,8 @@
 
 This is a web application built in Rails that is for a fictional photography service. The site lists provided services for registered users and a detail page for a specific service. Registered users are allowed to leave reviews on a service. It provides CRUD functionality to admins.
 
+* View live app deployed on Heroku: https://wild-smiles.herokuapp.com/ 
+
 ### Setup/Install Requirements
 
  Run these following commands in the terminal
